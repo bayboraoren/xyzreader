@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
@@ -83,6 +84,7 @@ public class ArticleDetailFragment extends Fragment implements
                 R.dimen.detail_card_top_margin);
 
 
+
         setHasOptionsMenu(true);
     }
 
@@ -128,6 +130,14 @@ public class ArticleDetailFragment extends Fragment implements
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo_container);
         mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
+
+        Toolbar toolbar = (Toolbar)mRootView.findViewById(R.id.article_toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
 
         //mStatusBarColorDrawable = new ColorDrawable(0);
 
@@ -187,6 +197,7 @@ public class ArticleDetailFragment extends Fragment implements
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
+
         //collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
 
