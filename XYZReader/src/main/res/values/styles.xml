@@ -20,15 +20,13 @@
     <style name="AppTheme" parent="AppTheme.Base"/>
 
     <style name="AppTheme.Base" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_black</item>
+        <item name="colorPrimaryDark">@color/primary_dark_gray</item>
+        <item name="colorAccent">@color/primary_accent</item>
     </style>
 
     <style name="HeaderTitleStyle">
         <item name="android:singleLine">false</item>
-    </style>
-
-    <style name="TextAppearance.ExpandedTitle"
-        parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textSize">26sp</item>
     </style>
 
 </resources>
